@@ -1,0 +1,19 @@
+body.dark-theme {
+    background-color: #222; 
+    color: white;
+}
+
+body.dark-theme .navbar {
+    background-color: #111; 
+    color: white;
+    box-shadow: none;
+}
+
+body.dark-theme .navbar ul li a {
+    color: #fff;
+}
+
+body.dark-theme .navbar ul li a:hover, .navbar ul li a.active {
+    background-color: #9966CC;
+    color: #fff;
+}
