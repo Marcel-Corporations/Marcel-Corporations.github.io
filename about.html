@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Marcel Corporations</title>
+    <meta name="description" content="Learn more about Marcel Corporations, our mission, values, and our approach to delivering innovative solutions across various sectors.">
+    <meta name="keywords" content="about, Marcel Corporations, company mission, innovation, values, corporate services">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <div class="top-bar">
+        <!-- Small logo on the top-right -->
+        <img src="images/Logo.png" alt="Marcel Logo" class="top-logo">
+    </div>
+
+    <div class="menu-icon" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div class="dropdown" id="menuDropdown">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html" class="active">About</a> <!-- Highlighted 'About' -->
+    </div>
+
+    <div class="main-content fade-in">
+        <h2>About Marcel Corporations</h2>
+        <h1 class="spaced-paragraph">Our Mission & Values</h1>
+        <p class="spaced-paragraph">Marcel Corporations is committed to delivering innovative, reliable, and efficient services to our clients across the globe. We take pride in our ability to combine cutting-edge technology with practical solutions, ensuring success in every project we undertake.</p>
+        <p>Our approach is rooted in collaboration, integrity, and a dedication to excellence. We believe that by working closely with our partners, we can tackle the most complex challenges and offer solutions that benefit all stakeholders.</p>
+        <p>Through our diverse range of services, including logistics, transportation, energy solutions, and nuclear research, we are not only providing services, but shaping the future. Our commitment to sustainability and progress drives everything we do.</p>
+        <p>At Marcel Corporations, we don't just aim to meet expectations—we strive to exceed them, making a lasting impact on industries, communities, and the world.</p>
+
+        <p><b>Thank you for trusting us with your journey to innovation and success.</b></p>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('menuDropdown').classList.toggle('show');
+        }
+
+        window.onclick = function (event) {
+            if (!event.target.matches('.menu-icon')) {
+                var dropdown = document.getElementById('menuDropdown');
+                if (dropdown.classList.contains('show')) {
+                    dropdown.classList.remove('show');
+                }
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('.fade-in').classList.add('visible');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcel Corporation Military Services - Japan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <!-- Top Bar with clickable logo -->
+    <div class="top-bar">
+        <a href="index.html">
+            <img src="images/Logo.png" alt="Marcel Corporations Logo" class="top-logo">
+        </a>
+    </div>
+
+    <!-- Menu icon for dropdown -->
+    <div class="menu-icon" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <!-- Dropdown menu -->
+    <div class="dropdown" id="menuDropdown">
+        <a href="index.html">Home</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="about.html">About</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content fade-in">
+        <h2>Marcel Corporation Military Services - Japan</h2>
+        
+        <!-- Image container for logo -->
+        <div class="service-image-container">
+            <img src="images/jp-military-logo.png" alt="Marcel Corporation Military Services Logo" class="service-image">
+        </div>
+        
+        <p class="spaced-paragraph">Welcome to Marcel Corporation Military Services, a strategic collaboration with the Japanese government. Our mission is to provide state-of-the-art military services, combining global expertise with Japan’s unique defense strategies.</p>
+        
+        <p class="spaced-paragraph">We specialize in a broad range of military services, from defense technologies and research to logistics and training. With a focus on security, innovation, and operational excellence, we are proud to support Japan’s defense infrastructure, ensuring the safety and security of the nation.</p>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('menuDropdown').classList.toggle('show');
+        }
+
+        window.onclick = function (event) {
+            if (!event.target.matches('.menu-icon')) {
+                var dropdown = document.getElementById('menuDropdown');
+                if (dropdown.classList.contains('show')) {
+                    dropdown.classList.remove('show');
+                }
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('.fade-in').classList.add('visible');
+        });
+    </script>
+</body>
+</html>

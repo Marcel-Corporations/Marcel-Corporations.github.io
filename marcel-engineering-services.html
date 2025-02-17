@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcel Engineering Services - Marcel Corporations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <!-- Top Bar with clickable logo -->
+    <div class="top-bar">
+        <a href="index.html">
+            <img src="images/Logo.png" alt="Marcel Corporations Logo" class="top-logo">
+        </a>
+    </div>
+
+    <!-- Menu icon for dropdown -->
+    <div class="menu-icon" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <!-- Dropdown menu -->
+    <div class="dropdown" id="menuDropdown">
+        <a href="index.html">Home</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="about.html">About</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content fade-in">
+        <h2>Marcel Engineering Services</h2>
+        
+        <!-- Image container for logo -->
+        <div class="service-image-container">
+            <img src="images/marcel-engineering-logo.png" alt="Marcel Engineering Services Logo" class="service-image">
+        </div>
+        
+        <p class="spaced-paragraph">Hello and welcome to Marcel Engineering Services, your gateway to innovation and excellence in the world of engineering. At Marcel Engineering Services, we provide a comprehensive range of engineering solutions tailored to your specific needs. Whether you require civil engineering, structural design, mechanical engineering, or any other engineering expertise, we're here to deliver.</p>
+        
+        <p class="spaced-paragraph">We understand that engineering is at the heart of modern progress and infrastructure. Our team of experts is dedicated to pushing the boundaries of what's possible, finding solutions to complex challenges, and turning ideas into reality.</p>
+        
+        <p class="spaced-paragraph">By choosing Marcel Engineering Services, you're partnering with a company committed to delivering high-quality engineering services that drive progress in various industries. Thank you for trusting us with your engineering needs, and we look forward to working together to achieve your goals.</p>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('menuDropdown').classList.toggle('show');
+        }
+
+        window.onclick = function (event) {
+            if (!event.target.matches('.menu-icon')) {
+                var dropdown = document.getElementById('menuDropdown');
+                if (dropdown.classList.contains('show')) {
+                    dropdown.classList.remove('show');
+                }
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('.fade-in').classList.add('visible');
+        });
+    </script>
+</body>
+</html>
