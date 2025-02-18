@@ -242,3 +242,16 @@ h1, h2 {
         height: auto;
     }
 }
+
+@media only screen and (max-width: 768px) {
+    html, body {
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+    }
+
+    * {
+        box-sizing: border-box;
+        max-width: 100%;
+    }
+}
