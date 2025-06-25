@@ -1,143 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - Marcel Corporations</title>
-   
-<link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg" />
-<link rel="shortcut icon" href="images/favicon/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
-<link rel="manifest" href="images/favicon/site.webmanifest" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Services - Marcel Corporations</title>
 
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="stylemobile.css">
+  <link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="images/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="images/favicon/site.webmanifest" />
 
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="stylemobile.css" />
+
+  <style>
+    .main-content {
+      margin-top: 10px !important;
+      padding-top: 10px;
+    }
+    .main-content > h1 {
+      margin-top: 0.2rem;
+    }
+    .main-content > h3 {
+      margin-top: 0.2rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+  
 </head>
 <body class="dark-theme">
-    <div class="top-bar">
-        <a href="index.html">
-            <img src="images/Logo.png" alt="Marcel Corporations Logo" class="top-logo">
-        </a>
+
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <a href="index.html">
+        <img src="images/Logo.png" alt="Marcel Corporations Logo" />
+      </a>
     </div>
+    <nav>
+      <a href="index.html" data-initial="H">Home</a>
+      <a href="services.html" class="active" data-initial="S">Services</a>
+      <a href="about.html" data-initial="A">About</a>
+      <a href="contact.html" data-initial="C">Contact</a>
+    </nav>
+    <div class="divider"></div>
+    <p style="color:#555; font-size:0.9rem; text-align:center; margin-top:auto;">
+      &copy; 2025 Marcel Corporations
+    </p>
+  </aside>
 
-    <div class="menu-icon" onclick="toggleMenu()">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
+  <main class="main-content fade-in">
+    <h1>Our Services</h1>
+    <h3>We provide a wide range of services.</h3>
 
-    <div class="dropdown" id="menuDropdown">
-        <a href="index.html">Home</a>
-        <a href="services.html" class="active">Services</a>
-        <a href="about.html">About</a>
-    </div>
+    <section class="service-section">
+      <h2>Marcel Corporation Services</h2>
 
-    <div class="main-content fade-in">
-        <h2>Our Services</h2>
-        <p class="spaced-paragraph">We provide a wide range of services, including:</p>
+      <div class="service-box">
+        <h3><a href="marcel-airways.html" class="service-link">Marcel Airways</a></h3>
+        <p>Top-tier air travel and freight logistics solutions worldwide.</p>
+      </div>
 
-        <section class="service-section">
-            <h2 class="section-title">Japanese Services (Subsidiaries of Marcel Corporations)</h2>
-            
-            <div class="service-box">
-                <h3><a href="jp-trucking-services.html" class="service-link">Japan Trucking Services</a></h3>
-                <p>Providing exceptional transport and logistics solutions specifically designed for the Japanese market, with operations across the nation.</p>
-            </div>
+      <div class="service-box">
+        <h3><a href="marcel-trucking.html" class="service-link">Marcel Trucking</a></h3>
+        <p>Reliable trucking with a focus on sustainability and safety.</p>
+      </div>
 
-            <div class="service-box">
-                <h3><a href="jp-shipments-services.html" class="service-link">Japan Shipments Services</a></h3>
-                <p>Specialized in shipping goods both locally and internationally, ensuring timely deliveries and optimal logistics for all shipments.</p>
-            </div>
+      <div class="service-box">
+        <h3><a href="nuclear-testing-research.html" class="service-link">Nuclear Testing and Research</a></h3>
+        <p>Advanced nuclear research and testing with strict safety protocols.</p>
+      </div>
 
-            <div class="service-box">
-                <h3><a href="jp-airways-services.html" class="service-link">Japan Airways Services</a></h3>
-                <p>Offering air transportation services with a focus on efficiency, safety, and customer satisfaction in both domestic and international flights.</p>
-            </div>
+      <div class="service-box">
+        <h3><a href="marcel-computer-services.html" class="service-link">Marcel Computer Services</a></h3>
+        <p>Innovative IT solutions, including software, cybersecurity, and cloud services.</p>
+      </div>
 
-            <div class="service-box">
-                <h3><a href="jp-oil-services.html" class="service-link">Japan Oil Services</a></h3>
-                <p>Supplying high-quality oil and energy solutions to meet the growing demands of Japan's industries, focusing on sustainability and innovation.</p>
-            </div>
+      <div class="service-box">
+        <h3><a href="marcel-engineering-services.html" class="service-link">Marcel Engineering Services</a></h3>
+        <p>Expert engineering solutions in civil, mechanical, and electrical fields.</p>
+      </div>
+    </section>
 
-            <div class="service-box">
-                <h3><a href="jp-nuclear-services.html" class="service-link">Japan Nuclear Services</a></h3>
-                <p>In close collaboration with Marcel Nuclear Testing and Research, we aim to provide cutting-edge nuclear services in Japan.</p>
-            </div>
+    <hr class="divider" />
 
-            <div class="service-box">
-                <h3><a href="jp-transport-services.html" class="service-link">Japan Transport Services</a></h3>
-                <p>Comprehensive transport services including freight forwarding, warehouse management, and more to ensure smooth operations across Japan.</p>
-            </div>
+    <section class="service-section">
+      <h2>Japanese Services (Subsidiaries of Marcel Corporations)</h2>
 
-            <div class="service-box">
-                <h3><a href="jp-train-services.html" class="service-link">Japan Train Services</a></h3>
-                <p>Efficient and reliable rail services catering to both passenger and cargo transport throughout Japan's extensive rail network.</p>
-            </div>
+      <div class="service-box">
+        <h3><a href="jp-trucking-services.html" class="service-link">Japan Trucking Services</a></h3>
+        <p>Exceptional transport and logistics solutions tailored for the Japanese market.</p>
+      </div>
 
-            <div class="service-box">
-                <h3><a href="jp-military-services.html" class="service-link">Japan Military Services</a></h3>
-                <p>Providing strategic defense solutions and support services to Japan's armed forces, ensuring readiness and strength in national security.</p>
-            </div>
+      <div class="service-box">
+        <h3><a href="jp-shipments-services.html" class="service-link">Japan Shipments Services</a></h3>
+        <p>Reliable shipping of goods locally and internationally with optimal logistics.</p>
+      </div>
 
-            <div class="service-box">
-                <h3><a href="jp-highway-services.html" class="service-link">Japan Highway Services</a></h3>
-                <p>Maintaining and enhancing Japan's road infrastructure to improve safety and ease of transport across urban and rural areas.</p>
-            </div>
-        </section>
+      <div class="service-box">
+        <h3><a href="jp-airways-services.html" class="service-link">Japan Airways Services</a></h3>
+        <p>Efficient and safe air transportation for domestic and international flights.</p>
+      </div>
 
-        <hr class="divider">
+      <div class="service-box">
+        <h3><a href="jp-oil-services.html" class="service-link">Japan Oil Services</a></h3>
+        <p>High-quality oil and energy solutions focusing on sustainability and innovation.</p>
+      </div>
 
-        <section class="service-section">
-            <h2 class="section-title">Marcel Corporation Services</h2>
+      <div class="service-box">
+        <h3><a href="jp-nuclear-services.html" class="service-link">Japan Nuclear Services</a></h3>
+        <p>Cutting-edge nuclear services in collaboration with Marcel Nuclear Testing and Research.</p>
+      </div>
 
-            <div class="service-box">
-                <h3><a href="marcel-airways.html" class="service-link">Marcel Airways</a></h3>
-                <p>Providing top-tier air travel and logistics solutions, focusing on both passenger comfort and freight efficiency across the globe.</p>
-            </div>
+      <div class="service-box">
+        <h3><a href="jp-transport-services.html" class="service-link">Japan Transport Services</a></h3>
+        <p>Comprehensive freight forwarding and warehouse management across Japan.</p>
+      </div>
 
-            <div class="service-box">
-                <h3><a href="marcel-trucking.html" class="service-link">Marcel Trucking</a></h3>
-                <p>Offering reliable and efficient trucking services for the transportation of goods, with a commitment to sustainability and safety.</p>
-            </div>
+      <div class="service-box">
+        <h3><a href="jp-train-services.html" class="service-link">Japan Train Services</a></h3>
+        <p>Reliable rail services for passenger and cargo transport nationwide.</p>
+      </div>
 
-            <div class="service-box">
-                <h3><a href="nuclear-testing-research.html" class="service-link">Nuclear Testing and Research</a></h3>
-                <p>Conducting cutting-edge nuclear research and testing to advance scientific knowledge while ensuring strict safety protocols.</p>
-            </div>
+      <div class="service-box">
+        <h3><a href="jp-military-services.html" class="service-link">Japan Military Services</a></h3>
+        <p>Strategic defense solutions and support for Japan's armed forces.</p>
+      </div>
 
-            <div class="service-box">
-                <h3><a href="marcel-computer-services.html" class="service-link">Marcel Computer Services</a></h3>
-                <p>Providing innovative IT solutions, including software development, cybersecurity, and cloud computing for businesses and individuals.</p>
-            </div>
+      <div class="service-box">
+        <h3><a href="jp-highway-services.html" class="service-link">Japan Highway Services</a></h3>
+        <p>Maintaining and enhancing road infrastructure for safety and convenience.</p>
+      </div>
+    </section>
+  </main>
 
-            <div class="service-box">
-                <h3><a href="marcel-engineering-services.html" class="service-link">Marcel Engineering Services</a></h3>
-                <p>Delivering expert engineering solutions in various fields, including civil, mechanical, and electrical engineering, with a focus on quality and precision.</p>
-            </div>
-        </section>
+  <script src="script.js"></script>
 
-        <p>Click on the service boxes to learn more about each of our services.</p>
-    </div>
-
-    <script>
-        function toggleMenu() {
-            document.getElementById('menuDropdown').classList.toggle('show');
-        }
-
-        window.onclick = function (event) {
-            if (!event.target.matches('.menu-icon')) {
-                var dropdown = document.getElementById('menuDropdown');
-                if (dropdown.classList.contains('show')) {
-                    dropdown.classList.remove('show');
-                }
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelector('.fade-in').classList.add('visible');
-        });
-    </script>
 </body>
 </html>

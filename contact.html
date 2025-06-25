@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contact - Marcel Corporations</title>
+
+<link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg" />
+<link rel="shortcut icon" href="images/favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
+<link rel="manifest" href="images/favicon/site.webmanifest" />
+
+<link rel="stylesheet" href="style.css" />
+<style>
+  .discord-link, .dm-button {
+    display: inline-block;
+    background-color: #5865F2;
+    color: white !important;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    user-select: none;
+    border: none;
+  }
+  .discord-link:hover, .dm-button:hover {
+    background-color: #4752c4;
+    text-decoration: none;
+  }
+  .tooltip {
+    visibility: hidden;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 5px 8px;
+    position: absolute;
+    z-index: 100;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 0.9rem;
+    pointer-events: none;
+  }
+  .tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+  }
+  .show-tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+  .button-container {
+    position: relative;
+    display: inline-block;
+  }
+</style>
+</head>
+<body class="dark-theme">
+
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <a href="index.html">
+        <img src="images/Logo.png" alt="Marcel Corporations Logo" />
+      </a>
+    </div>
+    <nav>
+      <a href="index.html" data-initial="H">Home</a>
+      <a href="services.html" data-initial="S">Services</a>
+      <a href="about.html" data-initial="A">About</a>
+      <a href="contact.html" class="active" data-initial="C">Contact</a>
+    </nav>
+    <div class="divider"></div>
+    <p style="color:#555; font-size: 0.9rem; text-align:center; margin-top:auto;">
+      &copy; 2025 Marcel Corporations
+    </p>
+  </aside>
+
+  <main class="main-content fade-in">
+    <h2>Welcome to Our Contact Page</h2>
+    <h1 class="spaced-paragraph">Get in Touch with Marcel Corporation</h1>
+
+    <p class="spaced-paragraph">We welcome your questions, feedback, and inquiries. Whether you’re interested in our services or want to learn more about what Marcel Corporation can offer, there are several ways to reach us.</p>
+
+    <p class="spaced-paragraph">Join our Discord community or send a direct message to MarcelBossASG for a quick response and direct interaction with our team.</p>
+
+    <p class="spaced-paragraph">
+      <strong>Join our Discord:</strong>
+      <a href="https://discord.gg/jDZTXYus6M" target="_blank" rel="noopener noreferrer" class="discord-link">Join Discord</a>
+    </p>
+
+    <p class="spaced-paragraph">
+      <strong>Or DM:</strong>
+      <span class="button-container">
+        <button class="dm-button" id="dmBtn" aria-label="Copy Discord username to clipboard">MarcelBossASG</button>
+        <span class="tooltip" id="tooltip">Copied!</span>
+      </span>
+    </p>
+
+    <hr class="divider" />
+
+<section>
+  <h2>More Information</h2>
+  <ul style="list-style-type: none; padding-left: 0;">
+    <li><strong>Location:</strong></li>
+  </ul>
+  <address style="
+    margin-left: 0rem;  /* indentation to align under Location */
+    line-height: 1.6;
+    color: #ccc;
+    border: 1px solid #555;
+    padding: 10px 15px;
+    border-radius: 6px;
+    max-width: 300px;
+    background-color: #2a2a2a;
+  ">
+    Itabashi, Itabashi-ku<br />
+    Tokyo 〒173-0000<br />
+    Japan
+  </address>
+</section>
+
+  </main>
+
+  <script src="script.js"></script>
+  <script>
+    const dmBtn = document.getElementById('dmBtn');
+    const tooltip = document.getElementById('tooltip');
+
+    dmBtn.addEventListener('click', () => {
+      const textToCopy = 'marcelbossasg';
+
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(textToCopy).then(() => {
+          showTooltip();
+        }).catch(() => {
+          fallbackCopyText(textToCopy);
+        });
+      } else {
+        fallbackCopyText(textToCopy);
+      }
+    });
+
+    function fallbackCopyText(text) {
+      const textArea = document.createElement("textarea");
+      textArea.value = text;
+      textArea.style.position = "fixed";
+      textArea.style.left = "-9999px";
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+
+      try {
+        const successful = document.execCommand('copy');
+        if (successful) {
+          showTooltip();
+        }
+      } catch (err) {
+      }
+
+      document.body.removeChild(textArea);
+    }
+
+    function showTooltip() {
+      tooltip.classList.add('show-tooltip');
+      setTimeout(() => {
+        tooltip.classList.remove('show-tooltip');
+      }, 1500);
+    }
+  </script>
+
+</body>
+</html>
