@@ -12,62 +12,19 @@
 <link rel="manifest" href="images/favicon/site.webmanifest" />
 
 <link rel="stylesheet" href="style.css" />
-<style>
-  .discord-link, .dm-button {
-    display: inline-block;
-    background-color: #5865F2;
-    color: white !important;
-    padding: 0.6rem 1.2rem;
-    border-radius: 6px;
-    font-weight: bold;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    user-select: none;
-    border: none;
-  }
-  .discord-link:hover, .dm-button:hover {
-    background-color: #4752c4;
-    text-decoration: none;
-  }
-  .tooltip {
-    visibility: hidden;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    border-radius: 4px;
-    padding: 5px 8px;
-    position: absolute;
-    z-index: 100;
-    bottom: 125%;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    transition: opacity 0.3s;
-    font-size: 0.9rem;
-    pointer-events: none;
-  }
-  .tooltip::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #333 transparent transparent transparent;
-  }
-  .show-tooltip {
-    visibility: visible;
-    opacity: 1;
-  }
-  .button-container {
-    position: relative;
-    display: inline-block;
-  }
-</style>
+
 </head>
 <body class="dark-theme">
+  
+<header class="top-bar">
+  <button id="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+</header>
+<div id="mobile-menu" role="menu" aria-label="Mobile navigation menu">
+  <a href="index.html" data-initial="H">Home</a>
+  <a href="services.html" data-initial="S">Services</a>
+  <a href="about.html" data-initial="A">About</a>
+  <a href="contact.html" class="active" data-initial="C">Contact</a>
+</div>
 
   <aside class="sidebar">
     <div class="sidebar-header">
@@ -136,8 +93,9 @@
   </main>
 
   <script src="script.js"></script>
-  <script>
-    const dmBtn = document.getElementById('dmBtn');
+  
+<script>
+   const dmBtn = document.getElementById('dmBtn');
     const tooltip = document.getElementById('tooltip');
 
     dmBtn.addEventListener('click', () => {
@@ -180,7 +138,7 @@
         tooltip.classList.remove('show-tooltip');
       }, 1500);
     }
-  </script>
+</script>
 
 </body>
 </html>

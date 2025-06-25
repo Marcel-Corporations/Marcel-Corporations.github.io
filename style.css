@@ -250,18 +250,143 @@ h1, h2 {
 
 /* Mobile Styleing */
 
+/* Top bar and toggle button (hidden on desktop) */
+.top-bar {
+  display: none; /* desktop default */
+  background-color: #121212;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.7);
+  z-index: 1100;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#menu-toggle {
+  font-size: 24px;
+  color: #ccc;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#menu-toggle:focus {
+  outline: 2px solid #a372ff;
+}
+
+/* Dropdown menu container - initially hidden */
+#mobile-menu {
+  display: none;
+  background-color: #121212;
+  position: fixed;
+  top: 50px; /* height of top bar + some */
+  left: 0;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.8);
+  z-index: 1050;
+  flex-direction: column;
+  padding: 10px 0;
+}
+
+/* Dropdown links */
+#mobile-menu a {
+  display: block;
+  padding: 12px 20px;
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 600;
+  border-top: 1px solid #333;
+}
+
+#mobile-menu a:hover,
+#mobile-menu a.active {
+  background-color: #a372ff;
+  color: #fff;
+}
+
+/* Show top bar and hide sidebar on mobile */
 @media (max-width: 768px) {
+  .top-bar {
+    display: flex;
+  }
+  
   .sidebar {
-    display: none !important; 
+    display: none !important;
   }
 
   main.main-content {
-    margin-left: 0 !important; 
-    padding: 20px 15px !important;
-    max-width: 100vw !important; 
+    margin-left: 0 !important;
+    padding-top: 60px; /* space for fixed top bar */
+  }
+}
+
+@media (max-width: 768px) {
+  /* existing styles ... */
+
+  main.main-content {
+    margin-left: 0 !important;
+    padding: 70px 20px 20px 20px !important;
+    max-width: 100vw !important;
+    box-sizing: border-box;
   }
 
   main.main-content > * {
-    max-width: 90vw !important;
+    max-width: 100% !important;
   }
 }
+
+.discord-link, .dm-button {
+    display: inline-block;
+    background-color: #5865F2;
+    color: white !important;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    user-select: none;
+    border: none;
+  }
+  .discord-link:hover, .dm-button:hover {
+    background-color: #4752c4;
+    text-decoration: none;
+  }
+  .tooltip {
+    visibility: hidden;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 5px 8px;
+    position: absolute;
+    z-index: 100;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 0.9rem;
+    pointer-events: none;
+  }
+  .tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+  }
+  .show-tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+  .button-container {
+    position: relative;
+    display: inline-block;
+  }
