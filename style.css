@@ -248,11 +248,8 @@ h1, h2 {
   }
 }
 
-/* Mobile Styleing */
-
-/* Top bar and toggle button (hidden on desktop) */
 .top-bar {
-  display: none; /* desktop default */
+  display: none;
   background-color: #121212;
   padding: 10px 20px;
   position: fixed;
@@ -277,12 +274,11 @@ h1, h2 {
   outline: 2px solid #a372ff;
 }
 
-/* Dropdown menu container - initially hidden */
 #mobile-menu {
   display: none;
   background-color: #121212;
   position: fixed;
-  top: 50px; /* height of top bar + some */
+  top: 50px;
   left: 0;
   width: 100%;
   box-shadow: 0 4px 8px rgba(0,0,0,0.8);
@@ -291,7 +287,6 @@ h1, h2 {
   padding: 10px 0;
 }
 
-/* Dropdown links */
 #mobile-menu a {
   display: block;
   padding: 12px 20px;
@@ -307,7 +302,6 @@ h1, h2 {
   color: #fff;
 }
 
-/* Show top bar and hide sidebar on mobile */
 @media (max-width: 768px) {
   .top-bar {
     display: flex;
@@ -319,12 +313,11 @@ h1, h2 {
 
   main.main-content {
     margin-left: 0 !important;
-    padding-top: 60px; /* space for fixed top bar */
+    padding-top: 60px;
   }
 }
 
 @media (max-width: 768px) {
-  /* existing styles ... */
 
   main.main-content {
     margin-left: 0 !important;
