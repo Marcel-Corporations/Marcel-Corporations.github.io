@@ -1,5 +1,13 @@
-document.addEventListener('DOMContentLoaded', function () {
-  document.querySelector('.fade-in').classList.add('visible');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+});
+
+document.querySelectorAll('.fade-in').forEach(el => {
+  observer.observe(el);
 });
 
 const menuToggle = document.getElementById('menu-toggle');
@@ -12,3 +20,6 @@ menuToggle.addEventListener('click', () => {
     mobileMenu.style.display = 'flex';
   }
 });
+
+const COPYRIGHT_YEAR = 2026;
+document.getElementById("year").textContent = COPYRIGHT_YEAR;
